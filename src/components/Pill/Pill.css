@@ -1,0 +1,12 @@
+.pill {
+  border-radius: 16px;
+  border-color: #e5e5e5;
+  background-color: #f9fafc;
+  padding-inline: 12px;
+  font-size: 14px;
+}
+.pill-green {
+  color: #157f3d;
+  border-color: #bbf7d1;
+  background-color: #effdf4;
+}

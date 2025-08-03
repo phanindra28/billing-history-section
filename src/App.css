@@ -1,0 +1,80 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family:
+    "Noto Sans",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /*padding: 2rem 6%;*/
+}
+/*.container {*/
+/*  box-sizing: border-box;*/
+/*  padding: 0 16px;*/
+/*  width: 100%;*/
+
+/*  display: grid;*/
+/*  grid-template-columns: repeat(4, minmax(0, 1fr));*/
+/*  column-gap: 16px;*/
+/*}*/
+
+/*@media (min-width: 768px) {*/
+/*  .container {*/
+/*    padding: 0 32px;*/
+/*    width: 100%;*/
+
+/*    grid-template-columns: repeat(6, minmax(0, 1fr));*/
+/*    column-gap: 32px;*/
+/*  }*/
+/*}*/
+
+/*@media (min-width: 1440px) {*/
+/*  .container {*/
+/*    max-width: 1280px;*/
+/*    padding: 0 32px;*/
+
+/*    grid-template-columns: repeat(12, minmax(0, 1fr));*/
+/*    column-gap: 32px;*/
+/*  }*/
+/*}*/
+
+.data-table {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 8rem;
+  border-radius: 8px;
+  color: #525252;
+  font-size: 14px;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  > div {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+.credits {
+  color: #777;
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.credits a {
+  color: #000;
+  font-weight: bold;
+}
