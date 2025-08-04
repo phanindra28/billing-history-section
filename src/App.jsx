@@ -4,23 +4,64 @@ import Pill from "./components/Pill/Pill.jsx";
 import moment from "moment";
 import useBillingData from "./hooks/useBillingData.jsx";
 import React from "react";
+import useMediaQuery from "./hooks/useMediaQuery.jsx";
 function App() {
   const { data, isLoading } = useBillingData();
+  const isSmallDevice = useMediaQuery('only screen and (max-width: 768px)');
   if (isLoading) {
     return <div className={"container mt-12"}>
       <div className={"text-lg font-bold col-span-full"}>Payment History</div>
-      <div className={"col-span-full mt-2"}>
+      <div className={"col-span-full mt-2 description"}>
         Please reach out to our friendly team via team@codepulse.com if you
         have questions
       </div>
       <div className={"text-center mt-4 font-semibold"}> Loading Payment data...</div>
     </div>
   }
+  if(isSmallDevice ){
+    return <div className={"container mt-12"}>
+      <div className={"text-lg font-bold col-span-full"}>Payment History</div>
+      <div className={"col-span-full mt-2 description"}>
+        Please reach out to our friendly team via team@codepulse.com if you
+        have questions
+      </div>
+      {data.length === 0 ? <div className={"text-center mt-4 font-semibold"}>
+        No Payment history found.
+      </div>: <>
+        {data.map((item, idx) => {
+          return (
+              <div key={idx} className={"data-table"}>
+                <div className={"heading"}>Invoice</div>
+                <div className={"font-semibold text-black text-right"}>
+                  {moment(item.created_at).format("DD MMM, YYYY")}
+                </div>
+                <div className={"heading"}>Status</div>
+                <div className={"text-right"}>
+                  <Pill status={item.status} />
+                </div>
+                <div className={"heading"}>Amount</div>
+                <div className={"font-semibold text-black text-right"}
+                >
+                  ${Number(item.amount).toFixed(2)}
+                </div>
+                <div className={"heading"} >Plan</div>
+                <div className={"font-semibold text-black text-right"}>
+                  {item.plan} plan
+                </div>
+                <div className={"text-center col-span-full"} style={{borderBottom: 0}}>
+                  <Download downloadUrl={item.invoice_url} />
+                </div>
+              </div>
+          )
+        })}
+      </>}
+    </div>
+  }
   return (
     <>
       <div className={"container mt-12"}>
         <div className={"text-lg font-bold col-span-full"}>Payment History</div>
-        <div className={"col-span-full mt-2"}>
+        <div className={"col-span-full mt-2 description"}>
           Please reach out to our friendly team via team@codepulse.com if you
           have questions
         </div>

@@ -1,12 +1,35 @@
-# React + Vite
+# Billing History Section
+This is a solution to the [Billing History Section](https://www.greatfrontend.com/projects/challenges/billing-history-section) challenge on Great Frontend. Great Frontend challenges help you improve your coding skills by building realistic projects.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+    - [Built with](#built-with)
+- [Author](#author)
 
-Currently, two official plugins are available:
+# Overview
+## The Challenge
+In this challenge, you are tasked with creating a user interface according to the specific layouts provided for desktop, tablet, and mobile views.
+## Screenshot
+### Desktop:
+![](./src/implementation/Desktop.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Mobile:
+![](./src/implementation/Mobile.png)
 
-## Expanding the ESLint configuration
+## Links
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built With
+- HTML
+- CSS
+- Javascript
+- React
+- Vite Config
+- Tailwind Classes
+- Moment Library
+
+## Author
+
+- Github - [phanindra28](https://github.com/phanindra28)
+- Great Frontend - [phanindra](https://www.greatfrontend.com/projects/u/phanindra)
