@@ -44,11 +44,11 @@
   .data-table {
     grid-template-columns: 1fr 1fr;
   }
-  .heading{
+  .heading {
     font-weight: 500;
   }
-  .data-table{
-    >div{
+  .data-table {
+    > div {
       padding: 1rem;
     }
   }
